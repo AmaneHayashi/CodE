@@ -381,7 +381,7 @@ public static void main(String[] args){
        - 示例：`float f = 234.5f`
 
         <font color='orange'><注：根据IEEE 754标准，`float`分为三部分：
-        - 符号位($S$，`1bit`，0为正1为负)+
+        - 符号位($S$，`1bit`，0为正1为负)
         - 指数位($E$，`7bit`，正规形式指数范围$-126\sim 127$，全0全1时为非正规形式)
         - 尾数位($M$，`23bit`，形式为$1.M$[正规形式]或$0.M$[非正规形式])
 
@@ -395,7 +395,7 @@ public static void main(String[] args){
        - 示例：`double d = 234.5`
 
         <font color='orange'><注：根据IEEE 754标准，`double`分为三部分：
-        - 符号位($S$，`1bit`，0为正1为负)+
+        - 符号位($S$，`1bit`，0为正1为负)
         - 指数位($E$，`11bit`，正规形式指数范围$-1022\sim 1023$，全0全1时为非正规形式)
         - 尾数位($M$，`52bit`，形式为$1.M$[正规形式]或$0.M$[非正规形式])
         
