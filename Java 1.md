@@ -221,7 +221,7 @@ public static void main(String[] args){
     - `synchronized`：同步
     - `transient`：短暂
     - `volatile`：易失
-  - 程序控制
+3. 程序控制
     - `break`：跳出循环
     - `case`：条件
     - `default`：默认
@@ -233,16 +233,16 @@ public static void main(String[] args){
     - `return`：返回
     - `switch`：选择
     - `while`：循环
-  - 错误处理
+4. 错误处理
     - `assert`：断言
     - `catch`：捕获
     - `finally`：执行
     - `throw`：抛出
     - `try`：尝试
-  - 包
+5. 包
     - `import`：引入
     - `package`：包
-  - 基本类型
+6. 基本类型
     - `boolean`
     - `byte`
     - `char`
@@ -251,11 +251,11 @@ public static void main(String[] args){
     - `int`
     - `long`
     - `short`
-  - 变量引用
+7. 变量引用
     - `super`：超类
     - `this`：本类
     - `void`：无返回值
-  - **保留关键字**
+8. **保留关键字**
     - `goto`：**不能使用**
     - `const`：**不能使用**
     - `null`：空
@@ -665,7 +665,8 @@ public static void main(String[] args){
 `\uxxxx`	| 16进制`Unicode`字符
 
 #### (7)Java 循环结构与条件语句
-1. **java中不能用1与0代替`true`与`false`**
+1. 与C语言的区别：
+   - **java中不能用1与0代替`true`与`false`**
 2. Java 循环结构
    - `while`循环：至少执行0次，当表达式为`false`时跳出循环。
    ```java
