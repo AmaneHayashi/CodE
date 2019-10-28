@@ -113,7 +113,9 @@
       - 基本数据类型是值传递，对形参的修改不会影响实参
       - 引用类型(对象+数组)是引用传递，形参和实参指向同一个内存地址(同一个对象)，所以对对象属性(数组元素)的修改会影响到实参。但是直接对对象修改时，相当于将形参指向另一个内存地址，则不会影响到实参
       - `String`以及基本数据类型的包装类可以理解为传值，对形参的修改不会影响实参
+    
     </font>
+
       ```java
       public static void main(String[] args){
           int a = 10, b = 20;
@@ -291,7 +293,9 @@
       ```
 4. Java 变量类型
     - 变量的声明：`type identifier [= value][, type identifier [= value] ...];`
+
     <font color='green' style='font-weight:bold'>
+
     - Java 变量类型有**类变量、实例变量、局部变量**
       - 类变量(静态变量)
         - 声明关键字：`static`
@@ -330,6 +334,7 @@
         - 数量：每个方法、构造方法、语句块可以创建自己的局部变量
 
       </font>
+
      ```java
       public class MyClass {
           // 类变量(常量)[一般public static final]
@@ -543,6 +548,7 @@
        - 使用该修饰符时，所声明的范围内Java的编译器以及运行环境会完全依照浮点规范IEEE-754来执行。
        - 使得浮点运算更加精确， 且不会因不同的硬件平台导致执行的结果不一致
    - 修饰符与可修饰内容一览表
+
         修饰符          | 类    | 接口 |内部类 | 方法   | 变量  |对象
         :---:          |:---:  |:---: |:---:  |:---:  |:---: |:---:
         `public`       | √     | √    | √     |√      |√     |×
@@ -556,6 +562,7 @@
         `volatile`     | ×     | ×    | ×     |×      |√     |× 
         `native`       | ×     | ×    | ×     |√      |×     |×  
         `strictfp`     | √     | √    | √     |√      |×     |× 
+
 #### (2)封装
 1. 定义：将抽象性函式接口的实现细节部份包装、隐藏，必须通过严格的接口控制才能访问该类的代码和数据
 2. 功能：只需修改代码实现，而不用管代码调用
@@ -739,7 +746,7 @@ public class Child extends Father {
 }
 ```
 9.  父类成员修饰符与子类继承、旁类访问的关系：
-<font color='green' style='font-weight:bold'>
+    <font color='green' style='font-weight:bold'>
      - 修饰符与旁类、子类对父类实例成员访问权限的关系：
        - `default`：父类与同包类[A]可以访问父类静态成员，不同包类[B]均不能访问(A、B互相无法访问)
        - `private`：父类[A]可以访问父类静态成员，其它类(子类、旁类)[B]均不能访问(A、B互相无法访问)
@@ -1309,7 +1316,8 @@ public class Test {
             void alarm();
         }
         ```
-![图片](https://www.runoob.com/wp-content/uploads/2013/12/oopxxx.png)
+![面向对象编程图例](https://www.runoob.com/wp-content/uploads/2013/12/oopxxx.png)
+
 #### (8)包
 1. 包
    - 定义：打包一组相互联系的类型(类、接口、枚举和注释)，为这些类型提供访问保护和命名空间管理的功能
