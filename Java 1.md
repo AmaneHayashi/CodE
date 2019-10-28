@@ -7,7 +7,24 @@
     -  `java FILENAME param...`：执行java源文件；
         - `FILENAME`为java源文件的文件名
         - `param`为传入的参数(即`public static void main(String[] args)`中的`args`)，用空格隔开，可以用双引号标记
-
+      ```java
+      public class Test {
+        public static void main(String args[]){ 
+          for(int i=0; i<args.length; i++){
+            System.out.println("args[" + i + "]:" + args[i]);
+          }
+        }
+      }
+      ```
+      ```cmd
+      $ javac Test.java 
+      $ java Test hello world my java !
+      args[0]: hello
+      args[1]: word
+      args[2]: my
+      args[3]: java
+      args[4]: !
+      ```
 2. 主函数格式：
 ```java
 public static void main(String[] args){
@@ -268,7 +285,7 @@ public static void main(String[] args){
         - 特点：**跟随JVM**，JVM只有一个堆区，它被所有线程共享
         - 存储：<font color='orange'>[对非局部变量，其内容与引用都在堆中]</font>
           - 关键字`new`产生的所有对象
-          - 实例变量（非`static`修饰的成员变量）
+          - 实例变量(非`static`修饰的成员变量)
           - 数组
         - 优点：可以动态地分配内存大小，生存期也不必事先告诉编译器
         - 缺点：速度慢
