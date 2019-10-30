@@ -245,7 +245,7 @@
 1. 正先行断言表示第一部分表达式**之前必须不**跟着`?=...`定义的表达式
 2. 返回结果只包含满足**匹配条件的第一部分表达式**
 <pre>
-"(?<!fat\s)(.at)" =>The <b>fat</b> cat <b>sat</b> on the <b>mat</b>.
+"(?&lt;!fat\s)(.at)" =>The <b>fat</b> cat <b>sat</b> on the <b>mat</b>.
 [理解]此时可匹配项有：前面不是"fat "的(任意单字符+"at")
 </pre>
 
