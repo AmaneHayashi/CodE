@@ -24,7 +24,7 @@
      - `private`，必须通过静态方法获得对象
    - 静态方法
      - `public static Pattern compile(String s[, int flags])`：将正则表达式`s`(根据标志`flags`)编译，返回正则模式
-       - `flags`为位掩码(*bit mask*)，每一个二进制位代表一种标志，通过同或可以得出所有的标志。
+       - `flags`为位掩码(*bit mask*)，每一个二进制位代表一种标志。
      ```java
      private static final int ALL_FLAGS = CASE_INSENSITIVE | MULTILINE | DOTALL | UNICODE_CASE | CANON_EQ | UNIX_LINES |LITERAL | UNICODE_CHARACTER_CLASS | COMMENTS;
 
