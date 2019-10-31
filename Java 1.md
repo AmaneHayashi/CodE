@@ -338,6 +338,12 @@ public static void main(String[] args){
 
   举例：
   ```java
+  int x = 1;
+  int y = x;
+  x = 3;
+  //此时y = 1
+  ```
+  ```java
   public class PersonDemo {
       public static void main(String[] args){   
           //局部变量p和形参args都在main方法的栈帧中
@@ -379,7 +385,7 @@ public static void main(String[] args){
       }
 
       //showCountry()方法在方法区中
-      public static void  showCountry(){
+      public static void showCountry(){
           System.out.println("country="+country);
       }
   }
