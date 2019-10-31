@@ -52,11 +52,11 @@
    - `param`为传入的参数(即`public static void main(String[] args)`中的`args`)，用空格隔开，可以用双引号标记
 ```java
 public class Test {
-  public static void main(String args[]){ 
-    for(int i=0; i<args.length; i++){
-      System.out.println("args[" + i + "]:" + args[i]);
+    public static void main(String args[]){ 
+      for(int i = 0; i < args.length; i ++){
+          System.out.println("args[" + i + "]:" + args[i]);
+      }
     }
-  }
 }
 ```
 ```cmd
@@ -338,10 +338,9 @@ public static void main(String[] args){
 
   举例：
   ```java
-  public class  PersonDemo
-  {
-      public static void main(String[] args) 
-      {   //局部变量p和形参args都在main方法的栈帧中
+  public class PersonDemo {
+      public static void main(String[] args){   
+          //局部变量p和形参args都在main方法的栈帧中
           //new Person()对象在堆中分配空间
           Person p = new Person();
           //sum在栈中，new int[10]在堆中分配空间
@@ -349,8 +348,8 @@ public static void main(String[] args){
       }
   }
 
-  class Person
-  {   //实例变量name和age在堆(Heap)中分配空间
+  class Person{   
+  //实例变量name和age在堆(Heap)中分配空间
       private String name;
       private int age;
       //类变量(引用类型)name1和"cn"都在方法区
@@ -362,8 +361,7 @@ public static void main(String[] args){
       private int[] num = new int[10];
 
 
-      Person(String name,int age)
-      {   
+      Person(String name,int age){   
           //this及形参name、age在构造方法被调用时
           //会在构造方法的栈帧中开辟空间
           this.name = name;
@@ -371,20 +369,17 @@ public static void main(String[] args){
       }
 
       //setName()方法在方法区中
-      public void setName(String name)
-      {
+      public void setName(String name){
           this.name = name;
       }
 
       //speak()方法在方法区中
-      public void speak()
-      {
+      public void speak(){
           System.out.println(this.name+"..."+this.age);
       }
 
       //showCountry()方法在方法区中
-      public static void  showCountry()
-      {
+      public static void  showCountry(){
           System.out.println("country="+country);
       }
   }
@@ -732,34 +727,35 @@ public static void main(String[] args){
 - 嵌套循环(多见于`for`嵌套)：在`for`循环中再嵌套`for`循环，可用于遍历多维数组等
    ```java
    for(int i = 0; i < 10; i ++){
-     for(int j = 0; j < 10; j ++){
-       System.out.println(10 * i + j);
-     }
+      for(int j = 0; j < 10; j ++){
+          System.out.println(10 * i + j);
+      }
    }
    //执行结果：顺次输出0~99的所有整数
    ```
 . `break`：用于**跳出当前循环**
    ```java
    for(int i = 0; i < 10; i ++){
-     for(int j = 0; j < 10; j ++){
-       if(j == 8){
-         break;
-       }
-       System.out.println(10 * i + j);
-     }
+      for(int j = 0; j < 10; j ++){
+          if(j == 8){
+            break;
+          }
+          System.out.println(10 * i + j);
+      }
    }
    //执行结果：顺次输出0~99中所有个位数小于8的整数
    ```
    <font color='orange'><注：若想一次性跳出所有循环，可以通过标号实现：
+
    ```java
    label:
    for(int i = 0; i < 10; i ++){
-     for(int j = 0; j < 10; j ++){
-       if(j == 8){
-         break label;
-       }
-       System.out.println(10 * i + j);
-     }
+      for(int j = 0; j < 10; j ++){
+          if(j == 8){
+              break label;
+          }
+          System.out.println(10 * i + j);
+      }    
    }
    //执行结果：顺次输出0~7的所有整数
    ```
@@ -768,12 +764,12 @@ public static void main(String[] args){
 - `continue`：用于**跳过当前次循环(进入下一次)**
    ```java
    for(int i = 0; i < 10; i ++){
-     for(int j = 0; j < 10; j ++){
-       if(j == 8){
-         continue;
-       }
-       System.out.println(10 * i + j);
-     }
+      for(int j = 0; j < 10; j ++){
+          if(j == 8){
+            continue;
+          }
+          System.out.println(10 * i + j);
+      }
    }
    //执行结果：顺次输出0~99中所有个位数不等于8的整数
    ```
@@ -781,8 +777,8 @@ public static void main(String[] args){
    ```java
    int[] a = {10, 20, 30, 40, 50};
    for(int i : a){
-     System.put.println(i);
-     i ++;
+      System.put.println(i);
+      i ++;
    }
    //执行结果：顺次输出数组元素，但数组元素值不变
    ```
@@ -792,10 +788,10 @@ public static void main(String[] args){
    //反编译结果
     int[] a = { 10, 20, 30, 40, 50 }; byte b; int j, arrayOfInt[];
     for (j = (arrayOfInt = a).length, b = 0; b < j; ) { 
-      int i = arrayOfInt[b];
-      System.out.println(i);
-      i++;
-      b++; 
+        int i = arrayOfInt[b];
+        System.out.println(i);
+        i++;
+        b++; 
     }
    ```
     **对于数组，增强循环依然是使用索引遍历(但是是对临时数组的索引)；对于集合，增强循环采用的是迭代器遍历。**</font>
