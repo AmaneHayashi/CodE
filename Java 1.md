@@ -820,11 +820,11 @@ public static void main(String[] args){
     }
     ```
 - `switch...case...deafult`：判断**一个变量与一系列值中某个值是否相等**，每个值称为一个分支。
-      - `switch`语句中的变量类型可以是：`byte`、`short`、`int`、`char`、`String`(从JSE1.7起支持)
-      - `case`语句的值的数据类型必须与变量的数据类型相同，且必须为字符串常量或字面量
-      - `switch`语句可以包含一个`default`分支，在没有`case`语句的值和变量值相等的时候执行，**`default`分支不需要`break`语句**
-      - 当变量的值与`case`语句的值不相等时，**直接跳入下一个`case`，无论当前`case`有没有`break`都不会执行**
-      - 当变量的值与`case`语句的值相等时，`case`语句之后的语句开始执行，**直到第一个`break`语句出现(这个`break`不一定是这个语句的`case`，每个`case`不必须要求有一个`break`)时停止**
+    - `switch`语句中的变量类型可以是：`byte`、`short`、`int`、`char`、`String`(从JSE1.7起支持)
+    - `case`语句的值的数据类型必须与变量的数据类型相同，且必须为字符串常量或字面量
+    - `switch`语句可以包含一个`default`分支，在没有`case`语句的值和变量值相等的时候执行，**`default`分支不需要`break`语句**
+    - 当变量的值与`case`语句的值不相等时，**直接跳入下一个`case`，无论当前`case`有没有`break`都不会执行**
+    - 当变量的值与`case`语句的值相等时，`case`语句之后的语句开始执行，**直到第一个`break`语句出现(这个`break`不一定是这个语句的`case`，每个`case`不必须要求有一个`break`)时停止**
     ```java
     switch(变量){
       case 可选值：
