@@ -88,18 +88,18 @@
 - 意义：正则表达式模式中的语法错误
 ```java
 public static void main(String... args){
- String input = "the fat cat sat on the mat.";
- String regex = "(?<!fat\\s)(.at)";
- StringBuffer sb = new StringBuffer();
- Matcher matcher = Pattern.compile(regex).matcher(input);
- while(matcher.find()) {
-     System.out.println(matcher.start());
-     System.out.println(matcher.end());
-     matcher.appendReplacement(sb, "dog");
-     System.out.println(sb.toString());
- }
- matcher.appendTail(sb);
- System.out.println(sb.toString());
+    String input = "the fat cat sat on the mat.";
+    String regex = "(?<!fat\\s)(.at)";
+    StringBuffer sb = new StringBuffer();
+    Matcher matcher = Pattern.compile(regex).matcher(input);
+    while(matcher.find()) {
+        System.out.println(matcher.start());
+        System.out.println(matcher.end());
+        matcher.appendReplacement(sb, "dog");
+        System.out.println(sb.toString());
+    }
+    matcher.appendTail(sb);
+    System.out.println(sb.toString());
  /** 系统输出：
  *    4
  *    7
@@ -116,17 +116,17 @@ public static void main(String... args){
 ``` 
 ```java
 public static void main(String... args){
- String input = "the fat cat sat on the mat.";
- String regex = "(?<name1>c|f)(?<name2>e|a)t";
- StringBuffer sb = new StringBuffer();
- Matcher matcher = Pattern.compile(regex).matcher(input);
- while(matcher.find()) {
-     System.out.println(matcher.groupCount());
-     for(int i = 0; i <= matcher.groupCount(); i ++) {
-         System.out.println(matcher.group(i));
-     }
-     System.out.println(matcher.group("name1"));
-     System.out.println(matcher.group("name2"));
+    String input = "the fat cat sat on the mat.";
+    String regex = "(?<name1>c|f)(?<name2>e|a)t";
+    StringBuffer sb = new StringBuffer();
+    Matcher matcher = Pattern.compile(regex).matcher(input);
+    while(matcher.find()) {
+        System.out.println(matcher.groupCount());
+        for(int i = 0; i <= matcher.groupCount(); i ++) {
+            System.out.println(matcher.group(i));
+        }
+        System.out.println(matcher.group("name1"));
+        System.out.println(matcher.group("name2"));
  }
  /** 系统输出：
  *   2
